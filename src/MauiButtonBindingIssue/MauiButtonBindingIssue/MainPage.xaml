@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiButtonBindingIssue"
+             x:DataType="local:MainViewModel"
+             x:Class="MauiButtonBindingIssue.MainPage">
+        <Grid
+            Padding="30,0"
+            RowSpacing="15"
+            RowDefinitions="45,45,*,45">
+            <Button x:Name="ButtonA" 
+                    Text="{Binding ButtonAText}"
+                    Command="{Binding ClearButtonATextCommand}"/>
+            <Button x:Name="ButtonB" 
+                    Text="{Binding ButtonBText}"
+                    Command="{Binding ClearButtonBTextCommand}"
+                    Grid.Row="1"/>
+            
+            <Button x:Name="ResetButton" 
+                    Text="Reset"
+                    BackgroundColor="Red"
+                    Command="{Binding ResetButtonsTextCommand}"
+                    Grid.Row="3"/>
+        </Grid>
+
+</ContentPage>
